@@ -219,20 +219,21 @@ label eternity_intro:
     $ show_chr("A-AFAAA-AAAA")
     y "...Oh? Let me try something..."
     $ consolehistory = []
-    if renpy.android:
-        call updateconsole ("Initializing webcam.py", "ValueError: Unsupported 'device_type'")
-        $ show_chr("A-AEAAA-AAAA")
-        y "..."
-        $ show_chr("A-ADAAA-AAAA")
-        y "I was hoping I could get your frontcam to work, but it seems you're running this mod in a device you're not supposed to play on..."
-        call hideconsole
-    else:
-        call updateconsole ("Initializing webcam.py", "PermissionError:[Errno 13]\nPermission denied.")
-        $ show_chr("A-AEAAA-AAAA")
-        y "..."
-        $ show_chr("A-ADAAA-AAAA")
-        y "I was hoping I could get your webcam to work, but it seems I don't have 'Administrator Access'..."
-        call hideconsole
+    # TODO: Just to note this...
+    # if renpy.android:
+    #     call updateconsole ("Initializing webcam.py", "ValueError: Unsupported 'device_type'")
+    #     $ show_chr("A-AEAAA-AAAA")
+    #     y "..."
+    #     $ show_chr("A-ADAAA-AAAA")
+    #     y "I was hoping I could get your frontcam to work, but it seems you're running this mod in a device you're not supposed to play on..."
+    #     call hideconsole
+    # else:
+    call updateconsole ("Initializing webcam.py", "PermissionError:[Errno 13]\nPermission denied.")
+    $ show_chr("A-AEAAA-AAAA")
+    y "..."
+    $ show_chr("A-ADAAA-AAAA")
+    y "I was hoping I could get your webcam to work, but it seems I don't have 'Administrator Access'..."
+    call hideconsole
     $ show_chr("A-ACAAA-AAAA")
     y "Someday, I want to stare deep into your eyes as well..."
     $ show_chr("A-ABAAA-AAAA")
