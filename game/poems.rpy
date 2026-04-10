@@ -9,8 +9,8 @@ init python:
 
     poem_y1 = Poem(
     author = "yuri",
-    title = "Ghost Under the Light",
-    text = """\
+    title = __("Ghost Under the Light"),
+    text = __("""\
 The tendrils of my hair illuminate beneath the amber glow.
 Bathing.
 It must be this one.
@@ -18,13 +18,13 @@ The last remaining streetlight to have withstood the test of time.
 the last yet to be replaced by the sickening blue-green hue of the future.
 I bathe. Calm; breathing air of the present but living in the past.
 The light flickers.
-I flicker back."""
+I flicker back.""")
     )
 
     poem_y2 = Poem(
     author = "yuri",
-    title = "The Raccoon",
-    text = """\
+    title = __("The Raccoon"),
+    text = __("""\
 It happened in the dead of night while I was slicing bread for a guilty snack.
 My attention was caught by the scuttering of a raccoon outside my window.
 That was, I believe, the first time I noticed my strange tendencies as an unordinary human.
@@ -44,13 +44,13 @@ You could say that we've gotten quite used to each other.
 The raccoon becomes hungry more and more frequently, so my bread is always handy.
 Every time I brandish my cutting knife, the raccoon shows me its excitement.
 A rush of blood. Classic Pavlovian conditioning. I slice the bread.
-And I feed myself again."""
+And I feed myself again.""")
     )
 
     poem_y3 = Poem(
     author = "yuri",
-    title = "Beach",
-    text = """\
+    title = __("Beach"),
+    text = __("""\
 A marvel millions of years in the making.
 Where the womb of Earth chaotically meets the surface.
 Under a clear blue sky, an expanse of bliss--
@@ -71,13 +71,13 @@ The salty air is therapeutic.
 The breeze is gentle, yet powerful.
 I sink my toes into the ultimate boundary line, tempted by the foamy tendrils.
 Turn back, and I abandon my peace to erode at the shore.
-Drift forward, and I return to Earth forevermore."""
+Drift forward, and I return to Earth forevermore.""")
     )
 
     poem_y3b = Poem(
     author = "yuri",
-    title = "Ghost Under the Light pt. 2",
-    text = """\
+    title = __("Ghost Under the Light pt. 2"),
+    text = __("""\
 The tendrils of my hair illuminate beneath the amber glow.
 Bathing.
 In the distance, a blue-green light flickers.
@@ -97,14 +97,14 @@ Have you ever heard of a ghost feeling warmth before?
 Giving up on understanding, I laugh.
 Understanding is overrated.
 I touch his hand. The flickering stops.
-Ghosts are blue-green. My heart is amber."""
+Ghosts are blue-green. My heart is amber.""")
     )
 
     poem_y22 = Poem(
     author = "yuri",
     yuri_2 = True,
-    title = "Wheel",
-    text = """\
+    title = __("Wheel"),
+    text = __("""\
 A rotating wheel. Turning an axle. Grinding. Bolthead. Linear gearbox. Falling sky. Seven holy stakes. \
 A docked ship. A portal to another world. A thin rope tied to a thick rope. A torn harness. Parabolic gearbox. \
 Expanding universe. Time controlled by slipping cogwheels. Existence of God. Swimming with open water in all directions. \
@@ -116,14 +116,14 @@ A clock that ticks forty times every time it ticks every second time. A bolthead
 the existence of a docked ship to another world. A kaleidoscope of blood written in clocks. A time-devouring \
 prayer connecting a sky of forty gears and open human eyes in all directions. Breathing gearbox. Breathing bolthead. \
 Breathing ship. Breathing portal. Breathing snakes. Breathing God. Breathing blood. Breathing holy stakes. \
-Breathing human eyes. Breathing time. Breathing prayer. Breathing sky. Breathing wheel."""
+Breathing human eyes. Breathing time. Breathing prayer. Breathing sky. Breathing wheel.""")
     )
 
     poem_y23 = Poem(
         author = "yuri",
         yuri_3 = True,
-        title = "mdpnfbo,jrfp",
-        text = """\
+        title = __("mdpnfbo,jrfp"),
+        text = __("""\
 ed,,zinger suivante,,tels handknits finish,,cagefuls basinlike bag octopodan,,imboss\
 ing vaporettos rorid easygoingnesses nalorphines,,benzol respond washerwomen bris\
 tlecone,,parajournalism herringbone farnarkeled,,episodically cooties,,initiallers \
@@ -171,14 +171,14 @@ making a mess of her. My head starts going crazy as my thoughts start to return.
 Shooting pain assaults my mind along with my thoughts. This is disgusting. Absolutely \
 disgusting. How could I ever let myself think these things? But it's unmistakable. \
 The lust continues to linger through my veins. An ache in my muscles stems from the \
-unreleased tension experienced by my entire body. Her Third Eye is drawing me closer."""
+unreleased tension experienced by my entire body. Her Third Eye is drawing me closer.""")
     )
 
     poem_y24 = Poem(
         author = "yuri",
         title = "",
-        text = """\
-I love you."""
+        text = __("""\
+I love you.""")
     )
 
     poem_n1 = Poem(

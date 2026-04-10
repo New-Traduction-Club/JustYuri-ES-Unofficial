@@ -37,6 +37,7 @@ python early:
         linux_root = linux_display.screen().root # Gets the root window in linux to get important information
 
     def get_home_directory():
+        # TODO: add compatibility for android
         if initial_dev_access:
             return os.path.join(config.gamedir, "saves")
 

@@ -124,23 +124,23 @@ screen chess(fen, player_color, movetime, depth):
     fixed xpos 20 ypos 390 spacing 30:
         vbox:
             showif chess_displayable.whose_turn == WHITE:
-                text 'Whose turn: White' style 'game_status_text'
+                text __('Whose turn: White') style 'game_status_text'
             else:
-                text 'Whose turn: Black' style 'game_status_text'
+                text __('Whose turn: Black') style 'game_status_text'
             #$ global player_turn
             #$ player_turn = chess_displayable.whose_turn == chess_displayable.player_color
 
             showif chess_displayable.game_status == CHECKMATE:
-                text 'Checkmate' style 'game_status_text'
+                text __('Checkmate') style 'game_status_text'
             elif chess_displayable.game_status == STALEMATE:
-                text 'Stalemate' style 'game_status_text'
+                text __('Stalemate') style 'game_status_text'
             elif chess_displayable.game_status == INCHECK:
-                text 'In Check' style 'game_status_text'
+                text __('In Check') style 'game_status_text'
             # no need to display DRAW or RESIGN as they immediately return
 
             # null height 50
 
-            text 'Most recent moves' style 'game_status_text' xalign 0.5
+            text __('Most recent moves') style 'game_status_text' xalign 0.5
             for move in chess_displayable.history:
                 text move.uci() style 'game_status_text' xalign 0.5
 
@@ -150,9 +150,9 @@ screen chess(fen, player_color, movetime, depth):
     fixed xpos 200 ypos 390:
         vbox:
             hbox spacing 5:
-                text 'Resign' color COLOR_WHITE size 13 yalign 0.5
+                text __('Resign') color COLOR_WHITE size 13 yalign 0.5
                 textbutton '⚐':
-                    action [Confirm('Would you like to resign?',
+                    action [Confirm(__('Would you like to resign?'),
                         yes=[
                         Play('sound', AUDIO_DRAW),
                         # if the current player resigns, the winner will be the opposite side
@@ -162,13 +162,13 @@ screen chess(fen, player_color, movetime, depth):
                     style 'control_button' yalign 0.5
 
             hbox spacing 5:
-                text 'Undo move' color COLOR_WHITE size 13 yalign 0.5
+                text __('Undo move') color COLOR_WHITE size 13 yalign 0.5
                 textbutton '⟲':
                     action [Function(chess_displayable.undo_move)]
                     style 'control_button' yalign 0.5
 
             hbox spacing 5:
-                text 'Flip board view' color COLOR_WHITE size 13 yalign 0.5
+                text __('Flip board view') color COLOR_WHITE size 13 yalign 0.5
                 textbutton '↑↓':
                     action [Play('sound', AUDIO_FLIP_BOARD),
                     ToggleField(chess_displayable, 'bottom_color'),
@@ -195,7 +195,7 @@ screen chess(fen, player_color, movetime, depth):
 
     # right panel for promotion selection
     showif chess_displayable.show_promotion_ui:
-        text 'Select promotion piece type' xpos 20 ypos 550 color COLOR_WHITE size 18
+        text __('Select promotion piece type') xpos 20 ypos 550 color COLOR_WHITE size 18
         # vbox xalign 0.9 yalign 0.5 spacing 2:
         #     null height 4
         textbutton '♜' xpos 40 ypos 575:

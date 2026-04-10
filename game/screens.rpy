@@ -365,8 +365,8 @@ init -501 screen say(who, what): #dialogue window
                 style "namebox"
                 text who id "who"
 
-    if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
+    # if not renpy.variant("small"):
+    #     add SideImage() xalign 0.0 yalign 1.0
 
     use quick_menu
 
@@ -590,6 +590,8 @@ init -501 screen quick_menu():
                 textbutton _("History") action ShowMenu('history')
                 textbutton _("Auto") action Preference("auto-forward", "toggle")
                 textbutton _("Settings") action ShowMenu('preferences')
+            
+            textbutton _("Hide") action HideInterface()
 
 default -1 quick_menu = True
 
@@ -659,8 +661,8 @@ init -501 screen navigation():
             ypos 340
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("Mod List") action ShowMenu("mod_list")
+                # if renpy.variant("pc"):
+                textbutton _("Mod List") action ShowMenu("mod_list")
         vbox:
             xpos 30
             ypos 380
@@ -675,58 +677,58 @@ init -501 screen navigation():
             ypos 100
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
+                # if renpy.variant("pc"):
+                textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
 
         vbox:
             xpos 30
             ypos 140
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
+                # if renpy.variant("pc"):
+                textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
         vbox:
             xpos 30
             ypos 180
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("Discord Server") action [Help("open_discord"), Show(screen="dialog", message="Join the Official Just Yuri Community!", ok_action=Hide("dialog"))]
+                # if renpy.variant("pc"):
+                textbutton _("Discord Server") action [Help("open_discord"), Show(screen="dialog", message="Join the Official Just Yuri Community!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 220
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("Official X") action [Help("open_twitter"), Show(screen="dialog", message="Follow Just Yuri on X!", ok_action=Hide("dialog"))]
+                # if renpy.variant("pc"):
+                textbutton _("Official X") action [Help("open_twitter"), Show(screen="dialog", message="Follow Just Yuri on X!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 260
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("Official YouTube") action [Help("open_youtube"), Show(screen="dialog", message="Subscribe to Just Yuri's Channel!", ok_action=Hide("dialog"))]
+                # if renpy.variant("pc"):
+                textbutton _("Official YouTube") action [Help("open_youtube"), Show(screen="dialog", message="Subscribe to Just Yuri's Channel!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 300
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("Credits") action ShowMenu("about")
+                # if renpy.variant("pc"):
+                textbutton _("Credits") action ShowMenu("about")
         vbox:
             xpos 30
             ypos 340
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("Mod List") action ShowMenu("mod_list")
+                # if renpy.variant("pc"):
+                textbutton _("Mod List") action ShowMenu("mod_list")
         vbox:
             xpos 30
             ypos 380
             style_prefix "navigation"
             hbox:
-                if renpy.variant("pc"):
-                    textbutton _("Quit") action Quit_no_farewell(confirm=not main_menu)
+                # if renpy.variant("pc"):
+                textbutton _("Quit") action Quit_no_farewell(confirm=not main_menu)
 
 
 init -1 style navigation_button is gui_button
@@ -768,10 +770,10 @@ init -501 screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text "Alpha Revival: [alpha.version]":
+            text __("Alpha Revival: [alpha.version]"):
                 style "main_menu_version"
 
-            text "Beta: [config.version]":
+            text __("Beta: [config.version]"):
                 style "main_menu_version"
 
     if not persistent.ghost_menu:
@@ -977,7 +979,7 @@ init -501 screen load():
 init -1 python:
     def FileActionMod(name, page=None, **kwargs):
         if persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
-            return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
+            return Show(screen="dialog", message=__("There's no point in saving anymore.\nDon't worry, I'm not going anywhere."), ok_action=Hide("dialog"))
         else:
             return FileAction(name)
 

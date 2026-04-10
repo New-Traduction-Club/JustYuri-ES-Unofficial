@@ -16,11 +16,11 @@ init -100 python:
 init python:
     menu_trans_time = 1
     #The default splash message, originally shown in Act 1 and Act 4
-    splash_message_default = "Wait... what is this?"
+    splash_message_default = __("Wait... what is this?")
     #Optional splash messages, originally chosen at random in Act 2 and Act 3
     splash_messages = [
-    "It's Just Yuri now.",
-    "Nobody would care if those obnoxious brats killed themselves."
+    __("It's Just Yuri now."),
+    __("Nobody would care if those obnoxious brats killed themselves.")
     ]
 
 image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign=0.5)
@@ -286,7 +286,7 @@ label after_load:
     else:
         if persistent.playthrough == 0 and not persistent.first_load and not dev_access:
             $ persistent.first_load = True
-            call screen dialog("Hint: You can use the \"Skip\" button to\nfast-forward through text you've already read.", ok_action=Return())
+            call screen dialog(__("Hint: You can use the \"Skip\" button to\nfast-forward through text you've already read."), ok_action=Return())
     return
 
 

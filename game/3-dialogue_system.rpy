@@ -366,7 +366,7 @@ init -999 python:
                     "three_choice_menu", 
                     active_dict, 
                     scroll_button_items, 
-                    [("Would it be fine if I changed the music a little?", "change_music"), ("Nevermind", "prompt_menu"), ("Why don't you change outfits, Yuri?", "changeoutfit")],
+                    [(__("Would it be fine if I changed the music a little?"), "change_music"), (__("Nevermind"), "prompt_menu"), (__("Why don't you change outfits, Yuri?"), "changeoutfit")],
                     random.sample(list(active_dict.keys()), len(active_dict)), # Changed this line
                     "no", 
                     0)
@@ -377,7 +377,7 @@ init -999 python:
                     farewell_options.append((dialogue_db[dialogue_name].name, dialogue_name))
                 if len(dialogue_list) > 3:
                     farewell_options = random.sample(farewell_options, k=3)
-                farewell_options.append(("Nevermind", "return"))
+                farewell_options.append((__("Nevermind"), "return"))
                 selected_dialogue = renpy.display_menu(farewell_options)
 
 
@@ -396,7 +396,7 @@ init -999 python:
             return
         else:
             print_debug(selection_method)
-            y("Selection method not found")
+            y(__("Selection method not found"))
             return
             
 #########################

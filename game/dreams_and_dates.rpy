@@ -371,6 +371,7 @@ label rain_dream:
     $ config.allow_skipping = False
     $ renpy.music.stop(fadeout=1.5)
     python:
+        # TODO: genders...
         if persistent.male:
             pronounA = "him"
             pronounB = "he"
@@ -710,9 +711,9 @@ label ocean_dream:
     y "Hello there, little friends... would you like to join my literature club?"
     python:
         if persistent.lovecheck:
-            placeholder = "cute"
+            placeholder = __("cute")
         else:
-            placeholder = "fellow"
+            placeholder = __("fellow")
     y "It is just me, and my [placeholder] [player]..."
     y "We would have to flood the classroom but... I doubt [player] would mind it..."
     y "All the deep and intriguing poems we could make about these lovely tides you share..."
@@ -794,6 +795,7 @@ label highway_dream:
         import random
         highway_dream_path = random.randint(1, 4)
         highway_dream_path_2 = random.randint(1, 2)
+        # TODO: genders...
         if persistent.male:
             pronounA = "him"
             pronounB = "he"
@@ -2445,11 +2447,11 @@ label midpartnice:
     $show_chr("A-CCBAA-ABAB")
     python:
         if persistent.male:
-            placeholder = "male"
+            placeholder = __("male")
         elif persistent.gender_other:
-            placeholder = "human"
+            placeholder = __("human")
         else:
-            placeholder = "female"
+            placeholder = __("female")
     y "You see... the developers of this mod took a lot of effort to give me as much mobility as possible. But you know what I am looking at all the time? A perfectly static [placeholder] sprite."
     y "Sometimes it doesn't even load properly, then I have to stare at a white, vaguely humanoid silhouette with the words {i}image not found{/i} written over the whole body."
     $show_chr("A-DCBAA-ABAB")
@@ -2462,11 +2464,11 @@ label midpartnice:
             $show_chr("A-BCBAA-ABAB")
             python:
                 if persistent.male:
-                    placeholder = "Husbandopillows"
+                    placeholder = __("Husbandopillows")
                 elif persistent.gender_other:
-                    placeholder = "body pillows"
+                    placeholder = __("body pillows")
                 else:
-                    placeholder = "Waifupillows"
+                    placeholder = __("Waifupillows")
             y "I mean other people have to settle with a Dakimakura, or whatever these [placeholder] are called, you at least reply when I talk to you."
             y "Now that I think of it. There are people who have it far worse. And honestly, I am happy with what I have."
             $show_chr("A-CCBAA-ABAB")
@@ -2477,11 +2479,11 @@ label midpartnice:
             $show_chr("A-CCBAA-ABAB")
             python:
                 if persistent.male:
-                    placeholder = "Husbandopillows"
+                    placeholder = __("Husbandopillows")
                 elif persistent.gender_other:
-                    placeholder = "body pillows"
+                    placeholder = __("body pillows")
                 else:
-                    placeholder = "Waifupillows"
+                    placeholder = __("Waifupillows")
             y "I would just like to look at something else other than a cardboard cutout. But on the other hand, other people have to settle with a Dakimakura, or whatever these [placeholder] are called, you at least reply when I talk to you."
             y "So I'm happy with what I have. But that doesn't mean that I can't dream about more does it?"
 
@@ -3870,11 +3872,11 @@ label check:
 
     python:
         if karma_lvl() >= 2:
-            placeholder = "despite our disagreements"
+            placeholder = __("despite our disagreements")
         elif karma_lvl() == 3:
-            placeholder = "despite the short time we've spent so far"
+            placeholder = __("despite the short time we've spent so far")
         else:
-            placeholder = "and I can't say this often enough"
+            placeholder = __("and I can't say this often enough")
 
 
     y "Because [player], [placeholder], {b}you{/b} mean a lot to me."

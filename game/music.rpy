@@ -60,10 +60,10 @@ init python:
             else:
                 musicmenu.append((i, "<loop 0>../music/" + i))
         if all_options:
-            musicmenu.append(("Play Okay Everyone! Yuri Variant", "<loop 4.444>bgm/5_yuri.ogg"))
-            musicmenu.append(("Play Stagnant Air", "<loop 96.04>/music/jy_music/Stagnant_Air_Loop.ogg"))
-        musicmenu.append(("I think I'd like the non-custom music.", ""))
-        musicmenu.append(("Nevermind", "nevermind"))
+            musicmenu.append((__("Play Okay Everyone! Yuri Variant"), "<loop 4.444>bgm/5_yuri.ogg"))
+            musicmenu.append((__("Play Stagnant Air"), "<loop 96.04>/music/jy_music/Stagnant_Air_Loop.ogg"))
+        musicmenu.append((__("I think I'd like the non-custom music."), ""))
+        musicmenu.append((__("Nevermind"), "nevermind"))
         return musicmenu
 
     def choose_music(all_options = True):
