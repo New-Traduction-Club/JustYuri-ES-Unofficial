@@ -1,5 +1,13 @@
 # Just Yuri ES
 
-This is an unofficial project that aims to translate and port Just Yuri to spanish.
+You can see the original Just Yuri [here](https://github.com/DarkskullDawnZenith/JustYuri).
 
-You can see the original repo [here](https://github.com/DarkskullDawnZenith/JustYuri).
+# Android port
+
+We are developing an android port/launcher, here it is: \
+https://github.com/New-Traduction-Club/JustYuri-Android-port
+
+# Translations
+
+- Spanish: [waiting for the repo]
+- Portuguese: [waiting for the repo]
