@@ -1260,7 +1260,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.lovecheck'],
         importance = 0,
-        name = __("How would you feel about a bit of cuddling, [persistent.yuri_nickname]?",)
+        name = __("How would you feel about a bit of cuddling, [persistent.yuri_nickname]?"),
         sub_category = __("Requests")))
 
     add_dialogue(Dialogue(
